@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    active: dev   # 配置是什么就加载什么
+    #active: dev

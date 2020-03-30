@@ -1,0 +1,27 @@
+server:
+  port: 3366
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://localhost:3344
+  # rabbitmq相关配置，暴露bus刷新配置的断点
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guset
+    password: guset
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
